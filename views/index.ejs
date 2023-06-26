@@ -1,0 +1,22 @@
+<%- include("partials/header",{title:"home",link:"./assets/style.css"}) %>
+
+
+
+
+<h1>
+    get all posts
+</h1>
+
+<a href="/blogs/create">create post</a>
+
+<ul>
+    <% posts.forEach(post => { %>
+       <li>
+          <b><%=post.title%></b> - <a href="/blogs/<%=post.id%>">view more</a>  
+       </li> 
+    <% }) %>
+
+</ul>
+
+<%- include("partials/footer") %>
+
